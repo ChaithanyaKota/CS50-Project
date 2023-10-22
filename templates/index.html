@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- Fonts -->
+
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <title>Sketched</title>
+</head>
+
+<body>
+
+    <div class='regform mt-3'>
+        <h1>Sketched</h1>
+    </div>
+
+    <form action='/sketch' class='main-form' method="POST" enctype="multipart/form-data">
+
+        <div class='text-center'>
+            <input type="file" id="file" name='file' style="margin-top:10px;margin-bottom:10px;">
+            <button type='submit' class='btn btn-outline-light'> Make Sketch
+            </button>   
+        </div>
+    </form>
+
+    {% if sketch_img_name %}
+    <div class="row main-form" style="margin-top:10px;margin-bottom:10px;">
+        <div class="col text-center">
+            <h2>ORIGINAL</h2>
+            <img src='../static/uploads/{{ original_img_name }}' style="display: block;margin-left: auto;margin-right: auto;" class="image">
+        </div>
+        <div class="col text-center">
+            <h2>SKETCH</h2>
+            <img src='../static/uploads/{{ sketch_img_name }}' style="display: block;margin-left: auto;margin-right: auto;" class="image">
+        </div>
+    </div>
+    {% endif %}
+
+
+</body>
+
+</html>

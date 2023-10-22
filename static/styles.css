@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    margin-top: 40px;
+    background-color: black;
+}
+
+.regform {
+    width: 800px;
+    background-color: rgb(0, 0, 0, 0.8);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+   border-radius: 15px 15px 0px 0px;
+
+}
+
+.main-form {
+    width: auto;
+    margin: auto;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-height: 500px;
+    max-width: 600px;
+    height: auto;
+    width: auto;
+}
+
+.image {
+    border: 1px solid azure;
+    border-radius: 16px;
+
+}
